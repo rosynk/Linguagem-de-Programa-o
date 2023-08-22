@@ -1,0 +1,22 @@
+package fatec;
+import javax.swing.*;
+/*Receba o tipo de investimento (1 = poupança e 2 = renda fixa) e o valor do investimento. 
+Calcule e mostre o valor corrigido em 30 dias sabendo que a poupança = 3% e a renda fixa = 5%.
+Demais tipos não serão considerados.*/
+public class LtEx0129 {
+    public static void main (String [] args){
+        int tipoInvestimento;
+        tipoInvestimento = Integer.parseInt(JOptionPane.showInputDialog("1 = poupança \n 2 = renda fixa"));
+        if (tipoInvestimento != 1 && tipoInvestimento != 2){
+            JOptionPane.showMessageDialog(null, "Opção Inválida!");
+            return;
+        }
+        if (tipoInvestimento==1){
+            double valorInvestimento = Double.parseDouble(JOptionPane.showInputDialog("Insira o valor do investimento (Poupança): "));
+            JOptionPane.showMessageDialog(null, "O valor corrigido é: "+valorInvestimento*(1.03));
+        } else {
+            double valorInvestimento = Double.parseDouble(JOptionPane.showInputDialog("Insira o valor do investimento (Renda Fixa): "));
+            JOptionPane.showMessageDialog(null, "O valor corrigido é: "+valorInvestimento*(1.05));
+        }
+    }
+}
