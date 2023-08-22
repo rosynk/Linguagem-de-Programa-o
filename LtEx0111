@@ -1,0 +1,12 @@
+package fatec;
+import javax.swing.*;
+
+public class LxEx0111 {
+    public static void main (String []args){
+        double x, mul;
+        x = Integer.parseInt(JOptionPane.showInputDialog("Digite o raio da circunferência: "));
+        mul = 2*3.14*x;
+        System.out.println ("Resultado: "+mul);
+    
+    }
+}
