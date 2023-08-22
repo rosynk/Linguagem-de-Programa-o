@@ -1,0 +1,15 @@
+package fatec;
+import javax.swing.*;
+public class LtEx0105 {
+    public static void main (String[]args){
+        double a, b, c;
+        double Raiz1, Raiz2, Delta;
+        a = Integer.parseInt (JOptionPane.showInputDialog("Digite o valor de A: "));
+        b = Integer.parseInt (JOptionPane.showInputDialog("Digite o valor de B: "));
+        c = Integer.parseInt (JOptionPane.showInputDialog("Digite o valor de C: "));
+        Delta = (b*b) - (4*a*c);
+        Raiz1 = ((-b) + Math.sqrt(Delta))/2*a;
+        Raiz2 = ((-b) - Math.sqrt(Delta))/2*a; 
+        System.out.println ("Raiz 1: "+Raiz1+"Raiz 2: "+Raiz2);
+    }
+}
