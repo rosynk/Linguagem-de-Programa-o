@@ -1,0 +1,14 @@
+package fatec;
+
+import javax.swing.JOptionPane;
+
+public class LtEx0109 {
+    public static void main (String[]args){
+        int x, y, soma;
+        x = Integer.parseInt(JOptionPane.showInputDialog("Informe um número: "));
+        y = Integer.parseInt(JOptionPane.showInputDialog("Informe outro número: "));
+        soma = (x*x)+(y*y);
+        System.out.println ("Resultado: "+soma);
+        
+    }
+}
