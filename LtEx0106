@@ -1,0 +1,13 @@
+package fatec;
+import javax.swing.*;
+public class LtEx0106 {
+    public static void main (String[]args){
+        int x, y, z;
+        x = Integer.parseInt(JOptionPane.showInputDialog("Informe o valor de x: "));
+        y = Integer.parseInt(JOptionPane.showInputDialog("Informe o valor de y: "));
+        z = x;
+        x = y;
+        y = z;
+        System.out.println("x: "+x+" .......... y: "+y);
+    }
+}
