@@ -1,0 +1,15 @@
+/*Calcule a quantidade de litros gastos em uma viagem, 
+sabendo que o automóvel faz 12 km/l. Receber o tempo de percurso e a velocidade média.*/
+package fatec;
+
+import javax.swing.JOptionPane;
+
+public class LtEx0117 {
+    public static void main (String[]args){
+double litros, km, tempo, velocidadeMedia; 
+    litros = Double.parseDouble(JOptionPane.showInputDialog("Informe os litros gastos: "));
+    velocidadeMedia = Double.parseDouble(JOptionPane.showInputDialog("Informe a velocidade media da viagem (km/h): "));
+    km = velocidadeMedia*litros;
+    System.out.println ("A quantidade de litros usada foi: "+(km/12)) ;
+    }
+}
