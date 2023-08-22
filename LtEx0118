@@ -1,0 +1,19 @@
+package fatec;
+import javax.swing.*;
+/*Receba 2 valores inteiros.
+Calcule e mostre o resultado da diferença do maior pelo menos valor.*/
+public class LtEx0118 {
+    public static void main (String [] args){
+        int x, y,sub;
+        x = Integer.parseInt(JOptionPane.showInputDialog("Informe o valor: "));
+        y = Integer.parseInt(JOptionPane.showInputDialog("Informe outro valor: "));
+        if (x>y) {
+            sub = x-y;
+            System.out.print(sub);
+        }
+        else{
+            sub=y-x;
+            System.out.print(sub);
+        }
+    }
+}
