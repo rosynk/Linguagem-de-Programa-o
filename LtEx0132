@@ -1,0 +1,13 @@
+package fatec;
+import javax.swing.*;
+/*Receba um número inteiro. Calcule e mostre o seu fatorial. */
+public class LtEx0132 {
+    public static void main(String[] args) {
+        double fatorial=1;
+        int numero = Integer.parseInt(JOptionPane.showInputDialog("Informe um número: "));
+        for (int i=1;i<=numero;i++){
+            fatorial = fatorial * i;
+        }
+        System.out.println("O fatorial de "+numero+" é: "+fatorial);
+    }
+}
