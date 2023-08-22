@@ -1,0 +1,27 @@
+import javax.swing.*;
+/*Receba 2 números inteiros, verifique qual o maior entre eles.
+Calcule e mostre o resultado da somatória dos números 
+ímpares entre esses valores.*/
+public class LtEx0135 {
+    public static void main (String [] args){
+        int numero1, numero2, soma =0;
+        numero1 = Integer.parseInt(JOptionPane.showInputDialog("Informe o primeiro valor: "));
+        numero2 = Integer.parseInt(JOptionPane.showInputDialog("Informe o segundo valor: "));
+        if (numero1>numero2){
+            do {
+              if (numero2%2!=0){
+                 soma = soma + numero2;
+              }  
+              numero2 = numero2 + 1;  
+            }while(numero2<=numero1);
+        } else {
+            do {
+              if (numero1%2!=0){
+                 soma = soma + numero1;
+              }  
+              numero1 = numero1 + 1;  
+            }while(numero1<=numero2);
+        }
+        System.out.println("A somatória é: "+soma);
+    }
+}
