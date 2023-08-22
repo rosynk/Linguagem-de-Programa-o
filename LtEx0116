@@ -1,0 +1,21 @@
+package fatec;
+import javax.swing.*;
+/*Receba a quantidade de horas trabalhadas, o valor por hora,
+* o percentual de desconto e o número de descendentes. 
+* Calcule o salário que serão as horas trabalhadas x o valor por hora. 
+* Calcule o salário líquido (= Salário Bruto – desconto).
+* A cada dependente será acrescido R$ 100 no Salário Líquido. 
+* Exiba o salário a receber */
+public class LtEx0116 {
+    public static void main (String [] args){
+        int horasTrabalhadas, valorHora, desconto, numeroDependentes;
+        double salarioBruto, salarioLiquido;
+        horasTrabalhadas = Integer.parseInt (JOptionPane.showInputDialog("Horas trabalhadas: "));
+        valorHora = Integer.parseInt (JOptionPane.showInputDialog("valor por hora: "));
+        desconto = Integer.parseInt (JOptionPane.showInputDialog("percentual de desconto: "));
+        numeroDependentes = Integer.parseInt (JOptionPane.showInputDialog("Número de dependentes: "));
+        salarioBruto = horasTrabalhadas*valorHora;
+        salarioLiquido = salarioBruto-(desconto/100);
+        System.out.println ("O salário é: "+(salarioLiquido + (numeroDependentes*100)));
+    }
+}
