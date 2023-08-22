@@ -1,0 +1,12 @@
+package fatec;
+import javax.swing.*;
+/*Receba o salário de um funcionário e mostre o novo salário com reajuste de 15%.*/
+public class LtEx0102 {
+    public static void main (String args[]){
+       int Salario;
+       double SalarioReajuste;
+       Salario = Integer.parseInt(JOptionPane.showInputDialog("Digite o salário: "));
+       SalarioReajuste = Salario * 1.15;
+       System.out.println ("O salário reajustado é equivalente a: "+SalarioReajuste);       
+    }
+}
