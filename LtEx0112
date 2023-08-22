@@ -1,0 +1,10 @@
+package fatec;
+import javax.swing.*;
+public class LtEx0112 {
+    public static void main (String[]args){
+        int anoNasc, anoAtual;
+        anoNasc = Integer.parseInt (JOptionPane.showInputDialog("Informe o ano de nascimento: "));
+        anoAtual = Integer.parseInt (JOptionPane.showInputDialog("Informe o ano atual: "));
+        System.out.print("Sua idade é: "+(anoAtual-anoNasc)+". A idade que você terá daqui 17 anos é: "+((anoAtual-anoNasc)+17));
+    }
+}
