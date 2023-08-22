@@ -1,0 +1,13 @@
+package fatec;
+import javax.swing.*;
+/* Coletar o valor do lado de um quadrado, calcular sua área e apresentar o resultado.*/
+
+        public class LtEx0101 {
+            public static void main (String args []){
+               int a, calc;
+               a = Integer.parseInt (JOptionPane.showInputDialog ("Coloque o valor do lado do quadrado: "));
+               calc = a * a;
+               System.out.println ("A área é: "+calc);
+            }
+    
+}
