@@ -1,0 +1,12 @@
+package fatec;
+import javax.swing.*;
+/*Receba a quantidade de alimento em quilos. Calcule e mostre quantos dias durará esse alimento sabendo que a pessoa consome 50g ao dia.*/
+public class LtEx0113semrepeticao {
+    public static void main (String[]args){
+     double kg, g, div;
+     kg = Double.parseDouble (JOptionPane.showInputDialog("Informe a quantidade de alimentos em kg: "));
+     g = kg*1000;
+     div = g/50;
+        System.out.println ("A quantidade de dias que durará o alimento é: "+div);
+    }
+}
