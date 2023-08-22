@@ -1,0 +1,11 @@
+package fatec;
+import javax.swing.*;
+public class LtEx0107 {
+    public static void main (String [] args){
+        double a, h, v;
+        a = Integer.parseInt(JOptionPane.showInputDialog("Informe o valor da largura: "));
+        h = Integer.parseInt(JOptionPane.showInputDialog("Informe o valor da altura: "));
+        v = Integer.parseInt(JOptionPane.showInputDialog("Informe o valor do volume: "));
+        System.out.println (a*h*v); 
+    }
+}
