@@ -1,0 +1,12 @@
+package fatec;
+import javax.swing.*;
+public class LtEx0104 {
+
+    public static void main(String[] args) {
+      int C;
+      double F;
+      C = Integer.parseInt (JOptionPane.showInputDialog("Informe a Temperatura em Celsius: "));
+      F = ((9*C)+160)/5;
+      System.out.println (F);
+    }    
+}
