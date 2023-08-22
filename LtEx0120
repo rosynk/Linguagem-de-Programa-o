@@ -1,0 +1,29 @@
+/*Receba 3 coeficientes A, B, e C de uma equação do 2º grau da fórmula AX²+BX+C=0. 
+Verifique e mostre a existência de raízes reais e se caso exista, calcule e mostre. */
+package fatec;
+import javax.swing.*;
+public class LtEX0120 {
+    public static void main (String[]args){
+        double A, B,C;
+        double Delta, raiz1, raiz2;
+        A = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor de A: "));
+        B = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor de B: "));
+        C = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor de C: "));
+        Delta = (B*B)-4*A*C;
+        if (Delta > 0){
+            System.out.println ("Delta: "+Delta);
+            raiz1 = ((-B) + Math.sqrt(Delta))/(2*A);
+            raiz2 = ((-B) - Math.sqrt(Delta))/(2*A);
+            System.out.println ("Primeira raíz: "+raiz1+". Segunda raíz: "+raiz2+". !ATENÇÃO! Os números não são reais, pois usam números complexos!");
+        }
+        else if (Delta == 0){
+            System.out.println ("Delta: "+Delta);
+            raiz1 =  ((-B) + Math.sqrt(Delta))/(2*A);
+            System.out.println("A raíz tem valor de: "+raiz1+". Possui número real!");
+        }
+        else {
+            System.out.println ("Delta: "+Delta);
+            System.out.println ("A equação não possui raíz real!");
+        }
+    }
+}
