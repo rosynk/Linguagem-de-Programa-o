@@ -1,0 +1,23 @@
+package fatec;
+import javax.swing.*;
+/*Receba 2 números inteiros. Verifique e mostre se o maior número é múltiplo do menor.*/
+public class LtEx0126 {
+    public static void main (String args []){
+        int x, y;
+        x = Integer.parseInt(JOptionPane.showInputDialog("Escreva um número: "));
+        y = Integer.parseInt(JOptionPane.showInputDialog("Digite outro número: "));
+        if (x>y){
+            if ((x%y)==0){
+                System.out.print("Seu maior número: "+x+" é múltiplo do menor: "+y);
+            } else {
+                System.out.println("Seu maior número: "+x+" não é múltiplo pelo menor: "+y);
+            }
+        } else {
+            if ((y%x)==0){
+                System.out.println("Seu maior número: "+y+" é múltiplo pelo menor: "+x);
+            } else {
+                System.out.println("Seu maior número: "+y+" não é múltiplol pelo menor: "+x);
+            }
+        }
+    }
+}
