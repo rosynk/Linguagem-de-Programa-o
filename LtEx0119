@@ -1,0 +1,15 @@
+/*Receba 2 valores reais. Calcule e mostre o maior deles. */
+package fatec;
+import javax.swing.*;
+public class LtEx0119 {
+    public static void main (String[]args){
+        double x = Double.parseDouble(JOptionPane.showInputDialog("Digite um número: "));
+        double y = Double.parseDouble(JOptionPane.showInputDialog("Digite outro número: "));
+        if (x>y){
+            JOptionPane.showMessageDialog(null,"O maior número é: "+x);
+        }
+        else{
+            JOptionPane.showMessageDialog(null,"O maior número é: "+y);
+        }
+    }
+}
