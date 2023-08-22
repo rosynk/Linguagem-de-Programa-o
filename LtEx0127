@@ -1,0 +1,17 @@
+package fatec;
+import javax.swing.*;
+/*Receba o número de voltas, a extensão do circuito (em metros) e o tempo de duração (minutos).
+Calcule e mostre a velocidade média em km/h.*/
+public class LtEx0127 {
+    public static void main (String []args){
+        double numeroVoltas, velocidadeMedia, conversaoMetragem, conversaoTempo, extensaoCircuito, resultado;
+        int tempoDuracao;
+            numeroVoltas = Double.parseDouble(JOptionPane.showInputDialog("Insira o número de voltas: "));
+            extensaoCircuito = Double.parseDouble(JOptionPane.showInputDialog("Insira a metragem do circuito: "));
+            tempoDuracao = Integer.parseInt(JOptionPane.showInputDialog("Qual foi o tempo de duração em minutos? "));
+            conversaoMetragem = extensaoCircuito/1000;
+            conversaoTempo = tempoDuracao/60;
+            resultado = (conversaoMetragem/conversaoTempo)*numeroVoltas;
+            System.out.println("A velocidade média foi: "+resultado);
+    }
+}
