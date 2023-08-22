@@ -1,0 +1,12 @@
+package fatec;
+    import javax.swing.*;
+        public class LtEx0115 {
+            public static void main (String [] args){
+                int cat1, cat2, h;
+                cat1 = Integer.parseInt(JOptionPane.showInputDialog("Informe o primeiro cateto: "));
+                cat2 = Integer.parseInt(JOptionPane.showInputDialog("Informe o segundo cateto: "));
+                h = (cat1*cat1)+(cat2*cat2);
+                System.out.println(Math.sqrt(h));
+            }    
+            
+}
