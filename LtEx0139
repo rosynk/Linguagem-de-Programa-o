@@ -1,0 +1,18 @@
+package fatec;
+
+import javax.swing.*;
+
+/*Calcule a quantidade de grãos contidos em um tabuleiro de xadrez onde:
+Casa: 	1	2	3	4	...	64
+Qdte:	1	2	4	8	...	N*/
+public class LtEx0139 {
+
+    public static void main(String[] args) {
+        int casa;
+        double quantidade = 1;
+        for (casa = 1; casa <= 64; casa++) {
+            System.out.println("Casa: " + casa + ". Quantidade: " + quantidade);
+            quantidade = quantidade * 2;
+        }
+    }
+}
