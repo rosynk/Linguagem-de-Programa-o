@@ -1,0 +1,25 @@
+package fatec;
+import javax.swing.*;
+/*Receba 2 números inteiros. Verifique e mostre todos os números primos existentes entre eles.*/
+public class LtEx0140 {
+    public static void main(String[] args) {
+        int numero1=0, numero2, i=1;
+        numero1 = Integer.parseInt(JOptionPane.showInputDialog("Informe um número: "));
+        numero2 = Integer.parseInt(JOptionPane.showInputDialog("Informe outro número: "));
+        if (numero2<numero1){
+            int x;
+            x = numero1;
+            numero1 = numero2;
+            numero2 = x;
+        }
+        do {
+            System.out.println(numero1);
+            do {
+              numero1 %= i;   
+              i += 1;
+                System.out.println(numero1);
+            }while (i<=10);
+            numero1 +=1 ;
+        }while (numero1<=numero2);
+    }
+}
