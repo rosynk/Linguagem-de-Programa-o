@@ -1,0 +1,14 @@
+public class LtEx0141 {
+	public static void main(String[] args) {
+		int soma, cont = 0;
+		for (int i=1;i<=7;i++) {
+			for (int j=1;j<=7;j++) {
+				soma = i+j;
+				if (soma==7) {
+					cont++;
+				}
+			}
+		}
+		System.out.print(cont);
+	}
+}
