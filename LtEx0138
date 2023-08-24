@@ -1,0 +1,26 @@
+package fatec;
+
+import javax.swing.*;
+
+/*Receba 100 números inteiros reais. Verifique e mostre o maior e o menor valor. 
+Obs.: somente valores positivos.*/
+public class LtEx0138 {
+
+    public static void main(String[] args) {
+        int numero, i = 0, maior = 0, menor=0;
+        do {
+            i = i + 1;
+            numero = Integer.parseInt(JOptionPane.showInputDialog("Informe um número: "));
+            if (i==1){
+                menor=numero;
+            }
+            if (maior < numero) {
+                maior = numero;
+            } else if (menor > numero) {
+                menor = numero;
+            }
+
+        } while (i <= 5);
+        System.out.println ("O maior número é: "+maior+". O menor é: "+menor);
+    }
+}
