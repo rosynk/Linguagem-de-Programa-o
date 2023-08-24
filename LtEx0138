@@ -11,6 +11,10 @@ public class LtEx0138 {
         do {
             i = i + 1;
             numero = Integer.parseInt(JOptionPane.showInputDialog("Informe um número: "));
+            if (numero<0){
+                JOptionPane.showMessageDialog(null,"Somente valores positivos!");
+                return;
+            }
             if (i==1){
                 menor=numero;
             }
