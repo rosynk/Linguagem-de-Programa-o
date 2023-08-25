@@ -13,7 +13,7 @@ public class LtEx0143 {
         do {
             crescimentoAna += 0.03;
             crescimentoMaria += 0.02;
-            i += i;
+            i += 1;
         } while (crescimentoAna < crescimentoMaria);
         System.out.print (i);
     }
