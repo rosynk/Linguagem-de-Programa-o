@@ -11,8 +11,8 @@ public class LtEx0143 {
         double crescimentoAna = 1.10, crescimentoMaria = 1.5;
         int i = 0;
         do {
-            crescimentoAna += 0.3;
-            crescimentoMaria += 0.2;
+            crescimentoAna += 0.03;
+            crescimentoMaria += 0.02;
             i += i;
         } while (crescimentoAna < crescimentoMaria);
         System.out.print (i);
