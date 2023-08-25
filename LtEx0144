@@ -1,0 +1,20 @@
+package fatec;
+
+import javax.swing.*;
+
+/*Receba o número da base e do expoente. 
+Calcule e mostre o valor da potência.*/
+public class LtEx0144 {
+
+    public static void main(String[] args) {
+        int base, expoente;
+        double potencia = 1;
+        base = Integer.parseInt(JOptionPane.showInputDialog("Informe o valor da base: "));
+        expoente = Integer.parseInt(JOptionPane.showInputDialog("Informe o valor do expoência: "));
+        for (int i = 1; i <= expoente; i++) {
+            potencia *= base;
+        }
+
+        System.err.println(potencia);
+    }
+}
