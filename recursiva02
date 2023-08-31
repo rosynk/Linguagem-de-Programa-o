@@ -1,0 +1,21 @@
+package fatec;
+
+import javax.swing.*;
+
+/*2)   Serie2 = (N) + (N-1) + (N-2) + ... + (1) */
+public class Recursiva02 {
+
+    public static void main(String[] args) {
+        int numero = Integer.parseInt(JOptionPane.showInputDialog("Informe um número para a série: "));
+        System.out.println(serie(numero));
+    }
+
+    public static int serie(int n) {
+        if (n == 1) {
+            return 1;
+        } else {
+            return n+serie(--n);
+        }
+
+    }
+}
