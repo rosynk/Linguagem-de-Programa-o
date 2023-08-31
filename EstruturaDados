@@ -1,0 +1,38 @@
+package l;
+
+import java.util.Random;
+
+/*Criar uma matriz com 5 linhas e 10 colunas e pesquisar se o valor 201 existe.
+Se encontrar, escrever a posição*/
+
+public class PesquisarValor {
+
+	public static void main(String[] args) {
+
+		int[][] vetor = new int[5][10];
+		Random numero = new Random();
+
+		for (int i = 0; i < vetor.length; i++) {
+			for (int j = 0; j < vetor.length; j++) {
+				vetor[i][j] = numero.nextInt();
+			}
+		}
+		int[] vect = encontrarValor(vetor);
+		System.out.print(vect[0] + " " + vect[1]);
+	}
+
+	static int[] encontrarValor(int Vetor[][]) {
+		int[] vect = new int[2];
+
+		for (int i = 1; i < Vetor.length; i++) {
+			for (int j = 1; j < Vetor.length; j++) {
+				if (Vetor[i][j] == 201) {
+					vect[0] = 0;
+					vect[1] = 0;
+					return vect;
+				}
+			}
+		}
+		return vect;
+	}
+}
