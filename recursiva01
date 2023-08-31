@@ -1,0 +1,21 @@
+package fatec;
+//1)   Serie1 = (1+2+3+...+100)
+
+import javax.swing.*;
+
+public class Recursiva01 {
+
+    public static void main(String[] args) {
+        int n = 100;
+        System.out.println(soma(n));
+    }
+
+    public static int soma(int numero) {
+        if (numero == 1) {
+            return 1;
+        } else {
+            return numero + soma(--numero);
+        }
+    }
+
+}
