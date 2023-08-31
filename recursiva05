@@ -1,0 +1,23 @@
+package fatec;
+
+import javax.swing.*;
+/*5)   Serie5 = (N)! + (N-1)! + (N-2)! + ... + (1)!*/
+
+public class recursiva05 {
+    public static void main(String[] args) {
+        int n = Integer.parseInt(JOptionPane.showInputDialog("Informe um número para a série: "));
+        System.out.println(fatorial(n));
+    }
+    static int fatorial (int numero){
+        if (numero==1){
+            return 1;
+        } else {
+        } return numero*fatorial(--numero)+soma(numero);
+    }
+    static int soma (int num){
+        int somaFatorial=0;
+        somaFatorial += num;
+     return somaFatorial;
+}
+}
+DEU ERRADO
