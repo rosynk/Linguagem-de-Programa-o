@@ -12,9 +12,7 @@ public class recursiva05 {
     }
 
     static int soma(int num) {
-        int somaFatorial = 0;
         if (num>1){
-            somaFatorial += fatorial(num);
         return fatorial(num) + soma(--num);
         } else {
             return 1;
