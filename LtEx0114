@@ -13,3 +13,24 @@ public class LtEx0114 {
     }
     
 }
+==================================================em procedimento============================================================
+package fatec;
+
+import javax.swing.JOptionPane;
+
+public class LtEx0114 {
+
+    public static void main(String[] args) {
+        int ang1, ang2;
+        ang1 = Integer.parseInt(JOptionPane.showInputDialog("Informe o primeiro ângulo: "));
+        ang2 = Integer.parseInt(JOptionPane.showInputDialog("Informe o segundo ângulo: "));
+        soma (ang1, ang2);
+
+    }
+    static void soma (int primeiroAngulo, int segundoAngulo){
+        int soma, terceiroAngulo;
+         soma = primeiroAngulo + segundoAngulo;
+        terceiroAngulo = 180 - soma;
+        System.out.println (terceiroAngulo);
+    }
+}
