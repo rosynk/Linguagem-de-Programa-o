@@ -10,3 +10,23 @@ package fatec;
             }    
             
 }
+=============================================em procedimento====================================================================
+package fatec;
+
+import javax.swing.*;
+
+public class LtEx0115 {
+
+    public static void main(String[] args) {
+        int cat1, cat2, h;
+        cat1 = Integer.parseInt(JOptionPane.showInputDialog("Informe o primeiro cateto: "));
+        cat2 = Integer.parseInt(JOptionPane.showInputDialog("Informe o segundo cateto: "));
+        calculo(cat1, cat2);
+    }
+    static void calculo (int primeiroCateto, int segundoCateto){
+        int h;
+        h = (primeiroCateto*primeiroCateto)+(segundoCateto*segundoCateto);
+        System.out.println(Math.sqrt(h));
+
+    }
+}
