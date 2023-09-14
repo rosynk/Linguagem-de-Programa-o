@@ -1,0 +1,32 @@
+package fatec;
+
+import java.util.Random;
+
+/*Criar e coletar um vetor [50] inteiro. Calcular e exibir:
+A média dos valores entre 10 e 200;
+A soma dos números ímpares. */
+public class LtEx0201 {
+
+    public static void main(String[] args) {
+        int vetor[] = new int[50];
+        Random rand = new Random();
+        double media = 0;
+        int contador = 0, soma = 0, somaImpares = 0;
+        
+        
+        for (int i = 0; i < vetor.length ; i++) {
+            vetor[i] = rand.nextInt(999);
+            if (vetor[i] >= 10 && vetor[i] <= 50) {
+                soma += vetor[i];
+                contador += 1;
+            }
+            if (vetor[i] / 2 != 0) {
+                somaImpares += vetor[i];
+            }
+        }
+
+        media = soma / contador;
+        System.out.println("A média é: " + media + ". A soma dos númeors ímpares é: " + somaImpares);
+    }
+
+}
