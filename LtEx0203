@@ -21,3 +21,18 @@ public class LtEx0203 {
         }
     }
 }
+================================================================================================================================================================================
+public static void main(String args[]) {
+        int vetor1[] = new int[3], vetor2[] = new int[3], vetor3[] = new int[6], contador, cont, outroContador;
+        for (contador = 0; contador < vetor3.length; contador++) {
+            if (contador < 3) {
+                vetor1[contador] = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor do vetor 1 na posição " + contador + ":"));
+                vetor3[contador] = vetor1[contador];
+            } else {
+                vetor2[contador - 3] = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor do vetor 2 na posição " + contador + ":"));
+                vetor3[contador] = vetor2[contador - 3];
+            }
+        }
+        System.out.println(" Vetor 1: " + Arrays.toString(vetor1) + "\n Vetor 2: " + Arrays.toString(vetor2) + "\n Vetor 3: " + Arrays.toString(vetor3));
+
+    }
