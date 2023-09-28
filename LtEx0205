@@ -1,0 +1,26 @@
+package fatec;
+
+import java.util.Arrays;
+import java.util.Random;
+
+public class LtEx0205 {
+
+    public static void main(String args[]) {
+        int Vetor[] = new int[20];
+        Random rand = new Random();
+        double soma = 0, subtracao = 0;
+
+        for (int i = 0; i < Vetor.length; i++) {
+            Vetor[i] = i;
+        }
+
+        System.out.println(Arrays.toString(Vetor));
+
+        for (int j = 0; j <= Vetor.length; j++) {
+            subtracao = Vetor[j] - Vetor [19-j];
+            System.out.println("A " + (j + 1) + " subtração de: " + Vetor[j] + " - " + Vetor[19 - j] + " é igual a " + subtracao);
+            soma += subtracao;
+
+        }
+    }
+}
