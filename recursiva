@@ -1,0 +1,23 @@
+package fatec;
+    import javax.swing.JOptionPane;
+
+//fatorial
+
+public class recursividadeFatorial {
+    
+    static int fatorial (int numero){
+        
+        if (numero == 1){            
+         return 1;   
+         
+        } else {
+            return numero * fatorial (--numero);
+        }     
+    }
+    
+    public static void main (String [] args){
+        int n;
+        n = Integer.parseInt(JOptionPane.showInputDialog ("Informe um número: "));
+        System.out.println (fatorial (n));
+    }
+}
