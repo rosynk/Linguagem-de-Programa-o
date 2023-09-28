@@ -1,0 +1,25 @@
+package fatec;
+
+import java.util.Arrays;
+import java.util.Random;
+
+public class LtEx0209 {
+    public static void main (String args[]){
+        int quatro [][] = new int [4][4];
+        Random numerosrand =  new Random ();
+        int multiplicacao = 1;
+        
+        
+        for (int i = 0; i < quatro.length; i++){
+            for (int j = 0; j < quatro.length; j++){
+                quatro [i][j] = numerosrand.nextInt(200);
+                if (i==j) {
+                    quatro [i][j] = multiplicacao;
+                    multiplicacao *= 4;
+                }
+                System.out.println (quatro[i][j]);
+            }
+        }
+        
+    }
+}
