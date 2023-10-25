@@ -1,0 +1,132 @@
+/*  ******************* CLASSE PRINCIPAL DO SISTEMA TRÂNSITO******************  */
+
+import javax.swing.*;
+
+public class classeTransito {
+
+    public static void main(String[] args) {
+        // INSTANCIA DA CLASSE COM 3 REGISTROS
+
+        acidentes[] catastrofe = new acidentes[3];
+        int i;
+
+        //EXECUÇÃO DO MÉTODO CONSTRUTOR
+        for (i = 0; i < catastrofe.length; i++) {
+            catastrofe[i] = new acidentes();
+        }
+
+        int digito = 0;
+
+        while (digito != 9) {
+
+            digito = Integer.parseInt(JOptionPane.showInputDialog(" ************************************************ \n MENU - ESTATÍSTICA ACIDENTES EM 2022 \n ************************************************ \nDigite 1 para: Cadastrar Estatística \nDigite 2 para: Consultar a quantidade de acidentes \nDigite 3 para: Consultar a estatística dos acidentes"
+                    + "\nDigite 4 para: Cidades com acidentes acima da média \nDigite 9 para: Finalizar programa"));
+
+            switch (digito) {
+
+                case 1:
+                    catastrofe = FCadastrarEstatistica(catastrofe);
+                    break;
+                case 2:
+                    PConsultaQtdAcidentes(catastrofe);
+                    break;
+                case 3:
+                    PMaiorMenor(catastrofe);
+                    break;
+                case 4:
+                    PAcimaMedia();
+                    break;
+                case 9:
+                    System.out.print("Programa Finalizado! \n Obrigado por participar!");
+                    break;
+
+                default:
+                    JOptionPane.showMessageDialog(null, "Opção Inválida");
+
+            }
+        }
+
+    }
+
+    
+    
+    //CASE 1
+    static acidentes[] FCadastrarEstatistica(acidentes[] catastrofe) {
+
+        for (int i = 0; i < catastrofe.length; i++) {
+
+            catastrofe[i].nomeCidade = JOptionPane.showInputDialog("Entre o nome da cidade:");
+            catastrofe[i].codigoCidade = Integer.parseInt(JOptionPane.showInputDialog("Entre o código da: " + catastrofe[i].nomeCidade + ": "));
+            catastrofe[i].quantidadeAcidentes = Integer.parseInt(JOptionPane.showInputDialog("Entre a quantidade de acidentes da cidade: " + catastrofe[i].nomeCidade + ", de código: " + catastrofe[i].codigoCidade));
+
+        }
+
+        return catastrofe;
+    }
+
+    //CASE 2
+    static void PConsultaQtdAcidentes(acidentes[] catastrofe) {
+
+        for (int i = 0; i < catastrofe.length; i++) {
+            
+            
+            if (catastrofe[i].quantidadeAcidentes > 100 && catastrofe[i].quantidadeAcidentes < 500) {
+                System.out.println(catastrofe[i].nomeCidade + " - " + catastrofe[i].quantidadeAcidentes + " acidentes.");
+                
+            }
+
+            
+        }
+
+    }
+    
+    // CASE 3
+    static void PMaiorMenor(acidentes[] catastrofe){    
+        
+    int auxMenor = 0;
+    int auxMaior = 0;
+    
+            for (int i = 0; i < catastrofe.length; i ++){
+                for (int j = 0; j < (catastrofe.length - 1); j ++){
+                    if(catastrofe[j].quantidadeAcidentes > catastrofe[j + 1].quantidadeAcidentes){
+				auxMenor = catastrofe[j].quantidadeAcidentes;
+				catastrofe[j].quantidadeAcidentes = catastrofe[j+1].quantidadeAcidentes;
+				catastrofe[j+1].quantidadeAcidentes = auxMenor;                   
+                    }                                             
+                }            
+            }
+            System.out.print ("Maior"  + auxMenor);
+            
+            for (int i = 0; i < catastrofe.length; i ++){
+                for (int j = 0; j < (catastrofe.length - 1); j ++){
+                    if(catastrofe[j].quantidadeAcidentes < catastrofe[j + 1].quantidadeAcidentes){
+				auxMenor = catastrofe[j].quantidadeAcidentes;
+				catastrofe[j].quantidadeAcidentes = catastrofe[j+1].quantidadeAcidentes;
+				catastrofe[j+1].quantidadeAcidentes = auxMenor;                   
+                    }                                             
+                }            
+            }
+            
+            System.out.print ("\n Menor: " + auxMaior + "\n");
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+class acidentes {
+
+    int codigoCidade;
+    int quantidadeAcidentes;
+    String nomeCidade;
+
+//METODO CONSTRUTOR
+    acidentes() {
+        this(0, 0, " ");
+    }
+
+    acidentes(int cidadeCodigo, int cidadeAcidentes, String cidadeNome) {
+
+        codigoCidade = cidadeCodigo;
+        quantidadeAcidentes = cidadeAcidentes;
+        nomeCidade = cidadeNome;
+    }
+}
