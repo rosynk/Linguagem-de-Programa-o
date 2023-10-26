@@ -34,7 +34,7 @@ public class classeTransito {
                     PMaiorMenor(catastrofe);
                     break;
                 case 4:
-                    PAcimaMedia();
+                    PAcimaMedia(catastrofe);
                     break;
                 case 9:
                     System.out.print("Programa Finalizado! \n Obrigado por participar!");
@@ -69,12 +69,15 @@ public class classeTransito {
 
         for (int i = 0; i < catastrofe.length; i++) {
             
-            
-            if (catastrofe[i].quantidadeAcidentes > 100 && catastrofe[i].quantidadeAcidentes < 500) {
-                System.out.println(catastrofe[i].nomeCidade + " - " + catastrofe[i].quantidadeAcidentes + " acidentes.");
+            System.out.println("********************************");
+                System.out.println("Acidentes entre 100 e 500");
                 
-            }
+            if (catastrofe[i].quantidadeAcidentes > 100 && catastrofe[i].quantidadeAcidentes < 500) {
 
+                System.out.println(catastrofe[i].nomeCidade + " - " + catastrofe[i].quantidadeAcidentes + " acidentes.");
+                  
+            } 
+             System.out.println("********************************");
             
         }
 
@@ -95,7 +98,10 @@ public class classeTransito {
                     }                                             
                 }            
             }
-            System.out.print ("Maior"  + auxMenor);
+            
+            System.out.print ("Maior: "  + auxMenor);
+            
+            auxMenor = catastrofe[0].quantidadeAcidentes;
             
             for (int i = 0; i < catastrofe.length; i ++){
                 for (int j = 0; j < (catastrofe.length - 1); j ++){
@@ -108,8 +114,24 @@ public class classeTransito {
             }
             
             System.out.print ("\n Menor: " + auxMaior + "\n");
+            System.out.println("********************************");
     }
+    
+    
+    //CASE 4
+    static void PAcimaMedia(acidentes[] catastrofe){
+        
+        int soma = 0;
+        int divisao = catastrofe.length;
+        
+        for (int i = 0; i < catastrofe.length; i ++){
+          soma += catastrofe[i].quantidadeAcidentes;  
+        }
+        System.out.println("Média de acidentes: " + soma/divisao);
+    }
+    
 }
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 class acidentes {
