@@ -1,0 +1,74 @@
+package Escola;
+
+import static Escola.procedimentos.cadastrarAlunos;
+import javax.swing.*;
+
+public class mainescola {
+
+    public static void main(String[] args) {
+        classeabstrata[] informacao = new classeabstrata[2];
+        int n;
+
+        do {
+            n = Integer.parseInt(JOptionPane.showInputDialog("***Menu***\n1 - Cadastro de Alunos \n2 - Verificação de notas\n"
+                    + "3 - Verificar média\n4 - Verificação de DP\n9 - Encerramento do Programa"));
+
+            switch (n) {
+                case 1:
+                   cadastrarAlunos(informacao);
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 9:
+                    JOptionPane.showMessageDialog(null, "Programa finalizado!");
+                    break;
+                default: 
+                    JOptionPane.showMessageDialog(null, "Valor inválido\nPor favor tente novamente!");
+
+            }
+
+        } while (n != 9);
+    }
+}
+=============================================================================================================================
+package Escola;
+
+ class classeabstrata {
+
+    String nome;
+    String turma;
+    int RA;
+    double nota;
+
+    
+
+    classeabstrata(String name, String classe, int ra, int notas) {
+        nome = name;
+        turma = classe;
+        RA = ra;
+        nota = notas;
+    }
+}
+==============================================================================================================================
+package Escola;
+import javax.swing.*;
+
+public class procedimentos {
+    
+    //case 1
+    static classeabstrata[] cadastrarAlunos(classeabstrata[] informacao){
+        for (int i = 0; i < informacao.length; i++){
+            informacao[i].nome = JOptionPane.showInputDialog("Informe o nome do aluno: ");
+            informacao[i].turma = JOptionPane.showInputDialog("Informe a turma do aluno " + informacao[i].nome);
+            informacao[i].RA = Integer.parseInt(JOptionPane.showInputDialog("Informe o RA do aluno: " + informacao[i].nome));
+            informacao[i].nota = Double.parseDouble(JOptionPane.showInputDialog("Informe a nota desse aluno: "));
+        }
+        return informacao;
+    }
+    
+    
+}
