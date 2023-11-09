@@ -1,0 +1,75 @@
+package fatec.sistemavotacao;
+
+import java.util.Random;
+
+import javax.swing.*;
+
+public class votacao {
+        Random rand = new Random();
+    public  void main(String[] args) {
+        cadastro[] info = new cadastro[2];
+
+        
+        int n;
+
+        do {
+            n = Integer.parseInt(JOptionPane.showInputDialog("----------------------------------------------------------------\n"
+                    + "|	SISTEMA DE VOTAÇÃO			|\n"
+                    + "|      1 – Carregar Seção/Número Eleitor 	|\n"
+                    + "|      2 – Classificar por Seção      		|\n"
+                    + "|      3 – Gravar Registros                                	|\n"
+                    + "|      4 – Mostrar Indicadores                                   |\n"
+                    + "|      9 – Finalizar                                           	|\n"
+                    + "----------------------------------------------------------------"));
+
+            switch (n) {
+                case 1:
+                    info = cadastrarregistros (info);
+                    break;
+                case 2:
+                    numerosecao(info);
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 9:
+                    break;
+                default: 
+            }
+
+        } while (n != 9);
+    }
+
+    public  cadastro [] cadastrarregistros (cadastro[] info){
+        for (int n = 0; n < info.length; n++){
+             info[n].numeroCandidato = rand.nextInt(300);
+             info[n].numeroSecao = rand.nextInt(10);
+             
+        }
+        return info;        
+    }
+    
+    public cadastro [] numerosecao (cadastro[] info){
+        
+            return null;
+        
+    }
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------package fatec.sistemavotacao;
+
+class cadastro {
+
+    int numeroSecao;
+    int numeroCandidato; 
+
+    cadastro() {
+
+    }
+
+    cadastro(int secao, int candidato) {
+
+        numeroSecao = secao;
+        numeroCandidato = candidato;
+    }
+}
