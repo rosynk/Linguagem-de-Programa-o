@@ -1,0 +1,57 @@
+
+import javax.swing.JOptionPane;
+
+public class Fatec {
+
+	public static void main(String[] args) {
+		int x = 0;
+		int vetor[] = new int[1];
+		Cadastro cadastro[] = new Cadastro[1];
+		do {
+			x = Integer.parseInt(JOptionPane.showInputDialog(" 1 - Cadastro \n 2 - Dados \n 3 - Média \n 9 - Sair"));
+			switch (x) {
+			case 1:
+
+				Cadastro[] v = CriarAluno(cadastro);
+				break;
+			case 2:
+
+				break;
+			case 3:
+				break;
+			case 9:
+				break;
+
+			}
+		} while (x != 9);
+	}
+
+	public static Cadastro[] CriarAluno(Cadastro[] cadastro) {
+		for (int i = 0; i < cadastro.length; i++) {
+			cadastro[i].Nome = JOptionPane.showInputDialog("Informe o nome: ");
+			cadastro[i].Idade = Integer.parseInt(JOptionPane.showInputDialog("Informe a idade: "));
+			cadastro[i].Turma = JOptionPane.showInputDialog("Informe a turma: ");
+			cadastro[i].Nota = Double.parseDouble(JOptionPane.showInputDialog("Informe a nota: "));
+		}
+		return cadastro;
+	}
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+class Cadastro {
+    String Nome;
+    String Turma;
+    int Idade;
+    double Nota;
+ 
+    public Cadastro(String nome, String turma, int idade, double nota) {
+		Nome = nome;
+		Turma = turma;
+		Idade = idade;
+		Nota = nota;
+	}
+
+	public Cadastro() {
+	}
+
+}
+
